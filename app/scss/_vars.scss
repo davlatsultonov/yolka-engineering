@@ -1,4 +1,4 @@
-$lg: 1260px;
-$md: 1024px;
-$sm: 768px;
-$xs: 480px;
+$lg: (max-width: 1260px);
+$md: (max-width: 1024px);
+$sm: (max-width: 768px);
+$xs: (max-width: 480px);

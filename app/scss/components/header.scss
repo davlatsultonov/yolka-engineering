@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  padding-top: 35px;
+  background-color: black;
+
+  &__logo {
+    width: 139px;
+    margin-right: 60px;
+
+    &-desktop {
+
+      @media #{$xs} {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @media #{$xs} {
+        display: inline-block;
+      }
+    }
+  }
+}
