@@ -1,0 +1,26 @@
+@import "vars";
+@import "fonts";
+@import "reset";
+@import "global";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'SFPro', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-smoothing: antialiased;
+    word-break: break-word;
+}
+
+input {
+    outline: none;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
