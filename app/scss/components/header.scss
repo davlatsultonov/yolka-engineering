@@ -1,11 +1,33 @@
 .header {
   display: flex;
+  align-items: center;
   padding-top: 35px;
-  background-color: black;
+
+  @media #{$xs} {
+    padding: 30px 25px;
+    flex-direction: column-reverse;
+    background-color: #fff;
+  }
 
   &__logo {
     width: 139px;
     margin-right: 60px;
+
+    @media #{$lg} {
+      margin-right: 40px;
+    }
+
+    @media (max-width: 810px) {
+      width: 115px;
+    }
+
+    @media #{$sm} {
+      width: 139px;
+    }
+
+    @media #{$xs} {
+      margin-right: 0;
+    }
 
     &-desktop {
 
@@ -20,6 +42,42 @@
       @media #{$xs} {
         display: inline-block;
       }
+    }
+  }
+
+  &__list {
+
+    &:not(&:nth-last-of-type(2)) {
+      margin-right: 50px;
+
+      @media #{$lg} {
+        margin-right: 30px;
+      }
+    }
+
+    &--right {
+      margin-left: auto;
+      margin-right: 0 !important;
+
+      @media #{$xs} {
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 28px;
+      }
+    }
+
+    .list__link {
+
+      @media #{$xs} {
+        color: #000;
+      }
+    }
+  }
+
+  &__btn {
+
+    &-hamburger {
+      margin-top: 4px;
     }
   }
 }
