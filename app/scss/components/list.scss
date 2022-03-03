@@ -12,6 +12,10 @@
     color: #fff;
     font-size: 16px;
     line-height: normal;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   &__icon {
@@ -33,6 +37,11 @@
 
         @media #{$lg} {
           margin-right: 20px;
+        }
+
+        @media #{$xs-l} {
+          margin-right: 0;
+          margin-bottom: 10px;
         }
       }
     }

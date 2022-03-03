@@ -66,6 +66,20 @@
       }
     }
 
+    &--inline {
+
+
+      .list__item {
+
+        &:not(:last-child) {
+
+          @media #{$xs} {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
     .list__link {
 
       @media #{$xs} {
