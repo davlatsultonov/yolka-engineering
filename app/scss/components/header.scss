@@ -2,8 +2,17 @@
   display: flex;
   align-items: center;
   padding-top: 35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: $layer-1;
 
-  @media #{$xs} {
+  @media #{$xs-l} {
+    position: relative;
+  }
+
+  @media #{$xs-l} {
     padding: 30px 25px;
     flex-direction: column-reverse;
     background-color: #fff;
@@ -25,13 +34,13 @@
       width: 139px;
     }
 
-    @media #{$xs} {
+    @media #{$xs-l} {
       margin-right: 0;
     }
 
     &-desktop {
 
-      @media #{$xs} {
+      @media #{$xs-l} {
         display: none;
       }
     }
@@ -39,7 +48,7 @@
     &-mobile {
       display: none;
 
-      @media #{$xs} {
+      @media #{$xs-l} {
         display: inline-block;
       }
     }
@@ -59,7 +68,7 @@
       margin-left: auto;
       margin-right: 0 !important;
 
-      @media #{$xs} {
+      @media #{$xs-l} {
         justify-content: space-between;
         width: 100%;
         margin-bottom: 28px;
@@ -74,11 +83,7 @@
         &:not(:last-child) {
 
           @media #{$xs-l} {
-            margin-right: 20px;
             margin-bottom: 0;
-          }
-
-          @media #{$xs} {
             margin-right: 0;
           }
         }
@@ -87,7 +92,7 @@
 
     .list__link {
 
-      @media #{$xs} {
+      @media #{$xs-l} {
         color: #000;
       }
     }

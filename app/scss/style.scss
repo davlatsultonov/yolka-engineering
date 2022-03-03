@@ -5,7 +5,10 @@
 // components
 @import "components/list";
 @import "components/logo";
+@import "components/slider";
 @import "components/header";
 @import "components/footer";
 @import "components/buttons";
 @import "visibility";
+@import "../../node_modules/owl.carousel/src/scss/owl.carousel";
+@import "../../node_modules/owl.carousel/src/scss/owl.theme.default";
