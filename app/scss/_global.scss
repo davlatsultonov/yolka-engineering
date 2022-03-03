@@ -67,3 +67,9 @@ h3 {
 	font-size: 18px;
 }
 
+p {
+
+	&:not(:last-of-type) {
+		margin-bottom: 12px;
+	}
+}
