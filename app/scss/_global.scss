@@ -68,6 +68,7 @@ h3 {
 }
 
 p {
+	line-height: normal;
 
 	&:not(:last-of-type) {
 		margin-bottom: 12px;

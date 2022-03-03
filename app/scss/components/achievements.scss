@@ -1,0 +1,53 @@
+.achievements {
+  padding-top: 35px;
+  padding-bottom: 43px;
+  background: #0F9589 url("../../images/icons/achievements-bg-shape.svg") repeat;
+  background-size: 150px;
+  color: #fff;
+
+  &__items {
+    display: flex;
+
+    @media #{$md} {
+      justify-content: space-between;
+    }
+
+    @media (max-width: 928px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  &__item {
+
+    @media (max-width: 928px) {
+      max-width: 290px;
+      width: 100%;
+    }
+
+    &:not(:last-of-type) {
+      margin-right: 143px;
+
+      @media #{$lg} {
+        margin-right: 60px;
+      }
+
+      @media #{$md} {
+        margin-right: 0;
+      }
+
+      @media (max-width: 928px) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 42px;
+  }
+
+  &__desc {
+    margin-top: 6px;
+    font-size: 24px;
+  }
+}
