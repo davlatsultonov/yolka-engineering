@@ -23,4 +23,14 @@ $(document).ready(function(){
     $(document).on('click', function (e) {
         if (!e.target.closest('#dropdown-list') && !e.target.closest('#hamburger-btn')) $('#dropdown-list').removeClass('active');
     })
+
+    // video
+    $(document).on('click', '#video-play-btn', function () {
+        const videoBlockWrapper = $(".card__video");
+        const videoBlockOverlay = videoBlockWrapper.find('.card__video-overlay');
+        const videoBlock = videoBlockWrapper.find('#video');
+        videoBlock.attr('controls', 'true')[0].play();
+        videoBlockOverlay.remove();
+        $(this).remove()
+    })
 });

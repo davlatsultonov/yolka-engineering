@@ -8,6 +8,9 @@
   display: inline-flex;
   align-items: center;
   font-size: 14px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 
   &:hover {
     text-decoration: underline;
@@ -20,6 +23,10 @@
 
   &--color-green {
     color: $base-green;
+  }
+
+  &--color-white {
+    color: #fff;
   }
 
   &--compact {

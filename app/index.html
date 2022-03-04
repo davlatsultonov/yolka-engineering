@@ -239,7 +239,18 @@
                 <div class="cards-group__item">
                     <div class="column column--2">
                         <div class="card card--video column__item">
-                            <div class="card__img card__img--big" style="background-image: url('images/2-column/img_video.png')"></div>
+                            <div class="card__video">
+                                <video id="video" muted>
+                                    <source src="./video/video.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                                <div class="card__video-controls">
+                                    <button class="button button--color-white" id="video-play-btn">
+                                        <img src="images/icons/play.svg" alt="play icon">
+                                        Смотреть видео</button>
+                                </div>
+                                <div class="card__video-overlay"></div>
+                            </div>
                             <h3 class="card__title">
                                 Девелопмент и строительство
                                 <span class="card__title-buttons">
