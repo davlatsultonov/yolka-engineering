@@ -6,7 +6,7 @@ $(document).ready(function(){
         nav: $hasSliderChildren,
         dots: $hasSliderChildren,
         items: 1,
-        navText: $hasSliderChildren ? ["<img src='../images/icons/slider_arrow-left.svg'>", "<img src='../images/icons/slider_arrow-right.svg'>"] : [],
+        navText: $hasSliderChildren ? ["<img src='images/icons/slider_arrow-left.svg'>", "<img src='images/icons/slider_arrow-right.svg'>"] : [],
         navContainer: '#slider-nav',
         dotsContainer:'#slider-dots',
         autoHeight:true
