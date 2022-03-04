@@ -63,7 +63,8 @@
 
   &__img {
     --maxHeight: 230px;
-    min-height: var(--maxHeight);
+    --minHeight: 230px;
+    min-height: var(--minHeight);
     max-height: var(--maxHeight);
     border-radius: $base-border-radius;
     background-repeat: no-repeat;
@@ -78,10 +79,12 @@
     }
 
     &--big {
-      --maxHeight: 363px;
+      --minHeight: 361px;
+      --maxHeight: 100%;
 
-      @media #{$md} {
+      @media #{$sm} {
         --maxHeight: 230px;
+        --minHeight: var(--maxHeight);
       }
 
       @media #{$xs} {
