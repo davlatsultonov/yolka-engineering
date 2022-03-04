@@ -19,9 +19,10 @@
 }
 
 .card {
+  position: relative;
 
   h1 {
-    & ~ p {
+    & + p {
       margin-top: 30px;
 
       @media #{$sm} {
@@ -31,14 +32,27 @@
   }
 
   h2 {
-    & ~ p {
+    & + p {
       margin-top: 10px;
     }
   }
 
   h3 {
-    & ~ p {
+    & + p {
       margin-top: 15px;
+    }
+  }
+
+  &__title {
+
+    &-buttons {
+      float: right;
+
+      @media #{$xs} {
+        float: none;
+        display: block;
+        margin-top: 18px;
+      }
     }
   }
 
@@ -79,6 +93,41 @@
 
       & ~ .card__title {
         margin-top: 10px;
+      }
+    }
+  }
+
+  &__bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+
+    .button {
+      float: right;
+
+      @media #{$xs} {
+        float: none;
+      }
+    }
+  }
+
+  p ~ .button {
+    margin-top: 15px;
+  }
+
+  &--video {
+
+    .card__img {
+      --maxHeight: 401px;
+
+      @media #{$sm} {
+        --maxHeight: 230px;
+      }
+
+      @media #{$xs} {
+        --maxHeight: 218px;
       }
     }
   }

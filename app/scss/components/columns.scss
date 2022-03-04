@@ -30,6 +30,17 @@
     grid-template-columns: repeat(var(--cols-4), 1fr);
   }
 
+  &--2, &--3 {
+
+    .card p:last-of-type {
+      margin-bottom: 30px;
+
+      @media #{$xs} {
+        margin-bottom: 60px;
+      }
+    }
+  }
+
   &--reversed {
 
     &.column--2 {
