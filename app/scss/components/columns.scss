@@ -1,0 +1,66 @@
+.column {
+  --cols-2: 2;
+  --cols-3: 3;
+  --cols-4: 4;
+  $super: &;
+  display: grid;
+  grid-column-gap: 52px;
+  grid-row-gap: 20px;
+
+  &:not(:last-of-type) {
+    margin-bottom: 40px;
+  }
+
+  &--2 {
+    grid-template-columns: repeat(var(--cols-2), 1fr);
+
+    &:not(:last-of-type) {
+
+      @media #{$xs-l} {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &--3 {
+    grid-template-columns: repeat(var(--cols-3), 1fr);
+  }
+
+  &--4 {
+    grid-template-columns: repeat(var(--cols-4), 1fr);
+  }
+
+  &--reversed {
+
+    &.column--2 {
+
+      &:nth-child(even) .column__item:last-child {
+        order:-1;
+
+        @media #{$sm} {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  @media #{$md} {
+    --cols-4: 3;
+  }
+
+  @media #{$sm} {
+    --cols-2: 1;
+    --cols-3: 2;
+    --cols-4: 2;
+  }
+
+  @media #{$xs-l} {
+    grid-column-gap: 30px;
+    --cols-3: 1;
+    --cols-4: 2;
+  }
+
+  @media #{$xs} {
+    --cols-4: 1;
+  }
+}

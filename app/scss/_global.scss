@@ -9,6 +9,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	font-smoothing: antialiased;
 	word-break: break-word;
+	color: #3e3e3e;
 }
 
 input {
@@ -53,8 +54,9 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 34px;
+	text-transform: uppercase;
 
-	@media #{$xs-l} {
+	@media #{$md} {
 		font-size: 24px;
 	}
 }
@@ -73,4 +75,8 @@ p {
 	&:not(:last-of-type) {
 		margin-bottom: 12px;
 	}
+}
+
+.text-small {
+	font-size: 14px;
 }
