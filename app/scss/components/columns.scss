@@ -45,12 +45,12 @@
   }
 
   @media #{$md} {
+    --cols-3: 2;
     --cols-4: 3;
   }
 
   @media #{$sm} {
     --cols-2: 1;
-    --cols-3: 2;
     --cols-4: 2;
   }
 

@@ -21,8 +21,12 @@
   &__item {
 
     @media (max-width: 928px) {
-      max-width: 290px;
+      max-width: 300px;
       width: 100%;
+    }
+
+    @media #{$xs} {
+      max-width: 85%;
     }
 
     &:not(:last-of-type) {
