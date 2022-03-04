@@ -36,7 +36,7 @@
 
     @media #{$xs-l} {
       font-size: 24px;
-      color: #0F9589;
+      color: $base-green;
       bottom: 0;
       padding-top: 20px;
     }
@@ -98,7 +98,7 @@
       border: 1px solid #fff;
 
       @media #{$xs-l} {
-        border-color: #0F9589;
+        border-color: $base-green;
       }
     }
   }
@@ -141,7 +141,7 @@
       background-color: #fff;
 
       @media #{$xs-l} {
-        background-color: #0F9589;
+        background-color: $base-green;
       }
     }
   }
