@@ -21,28 +21,39 @@
     background-repeat: no-repeat;
 
     @media #{$xs-l} {
-      min-height: 240px;
-    }
-
-    @media #{$xs} {
-      min-height: 180px;
+      min-height: 300px;
     }
   }
 
   &__title {
+    position: absolute;
     bottom: 106px;
-    font-size: 54px;
     color: #fff;
 
+    h1 {
+      font-size: 54px;
+      text-transform: uppercase;
+
+      @media #{$xs-l} {
+        font-size: 34px;
+      }
+    }
+
+    h2 {
+      font-size: 48px;
+
+      @media #{$xs-l} {
+        font-size: 24px;
+      }
+    }
+
     @media #{$xs-l} {
-      font-size: 24px;
-      color: $base-green;
-      bottom: 0;
+      bottom: 20px;
       padding-top: 20px;
     }
   }
 
-  .owl-nav, .owl-dots, .slider__title {
+  .owl-nav, .owl-dots {
     position: absolute;
 
     @media #{$xs-l} {
@@ -66,8 +77,8 @@
   @media #{$xs-l} {
     position: relative;
     bottom: 0;
-    padding-top: 18px;
-    padding-bottom: 18px;
+    padding-top: 14px;
+    padding-bottom: 10px;
   }
 
   button {
