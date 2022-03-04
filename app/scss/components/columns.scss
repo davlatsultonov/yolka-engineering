@@ -5,7 +5,7 @@
   $super: &;
   display: grid;
   grid-column-gap: 52px;
-  grid-row-gap: 20px;
+  grid-row-gap: 35px;
 
   &:not(:last-of-type) {
     margin-bottom: 40px;
@@ -36,7 +36,7 @@
       margin-bottom: 30px;
 
       @media #{$xs} {
-        margin-bottom: 60px;
+        margin-bottom: 0;
       }
     }
   }

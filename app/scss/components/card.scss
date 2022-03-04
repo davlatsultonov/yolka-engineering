@@ -1,6 +1,11 @@
 .cards-group {
   padding-top: 40px;
-  padding-bottom: 50px;
+  padding-bottom: 80px;
+  overflow: hidden;
+
+  @media #{$md} {
+    padding-bottom: 0;
+  }
 
   &__item {
 
@@ -104,6 +109,11 @@
     right: 0;
     overflow: hidden;
 
+    @media #{$xs} {
+      position: relative;
+      margin-top: 20px;
+    }
+
     .button {
       float: right;
 
@@ -128,6 +138,20 @@
 
       @media #{$xs} {
         --maxHeight: 218px;
+      }
+    }
+  }
+
+  &--promotion {
+
+    img {
+      margin: auto;
+      position: absolute;
+      top: 30px;
+
+      @media #{$md} {
+        position: relative;
+        top: 0;
       }
     }
   }
