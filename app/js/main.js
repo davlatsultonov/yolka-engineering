@@ -12,6 +12,7 @@ $(document).ready(function(){
         autoHeight:true
     })
     if ($hasSliderChildren) $('#slider-nav').width($('#slider-dots').width() + ($(window).width() < 480 ? 120 : 160)).height($('#slider-dots').height())
+    if (!$hasSliderChildren) $('.slider-navigation').remove();
 
     $(document).on('click', '#hamburger-btn', function () {
         $('#dropdown-list').css({

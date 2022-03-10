@@ -94,6 +94,7 @@
 
     &--small {
       --maxHeight: 165px;
+      --minHeight: var(--maxHeight);
 
       @media #{$xs} {
         --maxHeight: 218px;
