@@ -1,5 +1,5 @@
 .column {
-  --cols-2: 2;
+  --cols-2: repeat(2, 47.9%);
   --cols-3: 3;
   --cols-4: 4;
   $super: &;
@@ -12,12 +12,12 @@
   }
 
   &--2 {
-    grid-template-columns: repeat(var(--cols-2), 1fr);
+    grid-template-columns: var(--cols-2);
 
-    &:not(:last-of-type) {
+    .card__video video {
 
-      @media #{$xs-l} {
-        margin-bottom: 30px;
+      @media #{$sm} {
+        width: 100%;
       }
     }
   }
@@ -61,7 +61,7 @@
   }
 
   @media #{$sm} {
-    --cols-2: 1;
+    --cols-2: repeat(1, 1fr);
     --cols-4: 2;
   }
 
