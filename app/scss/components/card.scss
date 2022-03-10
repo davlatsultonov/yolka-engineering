@@ -69,6 +69,7 @@
     border-radius: $base-border-radius;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position-y: center;
 
     & ~ .card__title {
       margin-top: 25px;
