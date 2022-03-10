@@ -112,7 +112,7 @@
 
 
 
-    .list__link {
+    > .list__item > .list__link {
 
       @media #{$xs-l} {
         color: #000;

@@ -11,6 +11,7 @@
   &__link {
     color: #fff;
     font-size: 16px;
+    font-weight: 500;
     line-height: normal;
 
     &:hover {
@@ -47,23 +48,17 @@
     }
   }
 
-  &--dropdown {
-    position: absolute;
-    right: 10px;
-    background-color: #fff;
-    display: none;
-    border-radius: $base-border-radius;
-    padding: 5px;
-    box-shadow: 0 0 0 99999px rgba(0, 0, 0, .44);
-    z-index: $layer-2;
-    overflow: auto;
+  &--text-thin {
 
-    @media #{$xs} {
-      left: 10px;
+    > .list__item > .list__link {
+      font-weight: 400;
     }
+  }
 
-    &.active {
-      display: block;
+  &--side-menu {
+
+    &:not(:last-of-type) {
+      margin-bottom: 38px;
     }
 
     #{$super}__item {
@@ -74,16 +69,15 @@
     }
 
     #{$super}__link {
-      color: #000;
       width: 100%;
-      padding: 5px 15px;
+      padding: 7px 15px;
       display: block;
       transition: background-color .175s;
       border-radius: 6px;
 
       &:hover {
         text-decoration: none;
-        background-color: #e9e7e7;
+        background-color: #0c8278;
       }
     }
   }

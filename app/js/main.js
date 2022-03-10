@@ -16,14 +16,15 @@ $(document).ready(function(){
     if ($hasSliderChildren) $('#slider-nav').width($('#slider-dots').width() + ($(window).width() < 480 ? 120 : 160)).height($('#slider-dots').height())
 
     $(document).on('click', '#hamburger-btn', function () {
-        $('#dropdown-list').css({
-            'top': $(this).offset().top + 25 + 'px',
-            'max-height': $(window).height() - 180
-        }).toggleClass('active');
+        $('#side-menu').toggleClass('active');
+    })
+
+    $(document).on('click', '#side-menu-close-btn', function () {
+        $('#side-menu').removeClass('active');
     })
 
     $(document).on('click', function (e) {
-        if (!e.target.closest('#dropdown-list') && !e.target.closest('#hamburger-btn')) $('#dropdown-list').removeClass('active');
+        if (!e.target.closest('#side-menu') && !e.target.closest('#hamburger-btn')) $('#side-menu').removeClass('active');
     })
 
     // video
