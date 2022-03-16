@@ -114,7 +114,6 @@
     position: relative;
     max-height: var(--maxHeight);
     height: 100%;
-    border: 1px solid rgba(89, 89, 89, 0.62);
 
     @media #{$sm} {
       --maxHeight: 230px;

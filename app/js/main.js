@@ -32,6 +32,7 @@ $(document).ready(function(){
         const videoBlockWrapper = $(".card__video");
         const videoBlockOverlay = videoBlockWrapper.find('.card__video-overlay');
         const videoBlock = videoBlockWrapper.find('#video');
+        videoBlockWrapper.css('border', '1px solid rgba(89,89,89,0.62)');
         videoBlock.attr('controls', 'true')[0].play();
         videoBlockOverlay.remove();
         $(this).remove()
