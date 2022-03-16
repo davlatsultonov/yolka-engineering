@@ -32,7 +32,7 @@
       background-color: rgba(0, 0, 0, 0.5);
 
       @media #{$xs-l} {
-        background-color: rgba(0, 0, 0, 0.35);
+        display: none;
       }
     }
 
@@ -66,10 +66,32 @@
       }
     }
 
+    @media #{$sm} {
+      bottom: 60px;
+    }
+
     @media #{$xs-l} {
-      bottom: 20px;
-      left: 20px;
-      padding-top: 20px;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      padding: 20px;
+      z-index: 1;
+      background: inherit;
+      overflow: hidden;
+    }
+
+    &:before {
+
+      @media #{$xs-l} {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backdrop-filter: blur(10px);
+      }
     }
   }
 
@@ -83,6 +105,33 @@
 
   .owl-nav, .owl-dots {
     bottom: 0;
+  }
+}
+
+@supports not (backdrop-filter: blur(10px)) {
+  .slider {
+
+    &__img {
+
+      &:before {
+
+        @media #{$xs-l} {
+          display: block;
+          background-color: rgba(0, 0, 0, 0.35);
+        }
+      }
+    }
+
+
+    &__title {
+
+      &:before {
+
+        @media #{$xs-l} {
+          display: none;
+        }
+      }
+    }
   }
 }
 
