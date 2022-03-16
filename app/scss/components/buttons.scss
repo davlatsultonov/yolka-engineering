@@ -1,3 +1,10 @@
+@mixin compact-button {
+  font-family: 'CoFoSans', sans-serif;
+  border-radius: 24px;
+  border: 1px solid #979797;
+  padding: 11px 31px;
+}
+
 .hamburger-btn {
   background-color: transparent;
   border: none;
@@ -5,6 +12,7 @@
 }
 
 .button {
+  font-family: 'Roboto', sans-serif;
   display: inline-flex;
   align-items: center;
   font-size: 14px;
@@ -30,17 +38,13 @@
   }
 
   &--compact {
-    border-radius: 24px;
-    border: 1px solid #979797;
-    padding: 11px 31px;
+    @include compact-button;
   }
 
   &--compact-mobile {
 
     @media #{$xs} {
-      border-radius: 24px;
-      border: 1px solid #979797;
-      padding: 11px 31px;
+      @include compact-button;
     }
   }
 }
