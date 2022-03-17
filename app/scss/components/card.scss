@@ -125,6 +125,7 @@
 
     video {
       height: 100%;
+      border-radius: $base-border-radius;
     }
 
     & ~ .card__title {
@@ -222,11 +223,11 @@
     img {
       margin: auto;
       position: absolute;
-      top: 30px;
+      bottom: -278px;
 
       @media #{$md} {
         position: relative;
-        top: 0;
+        bottom: 0;
       }
     }
   }
