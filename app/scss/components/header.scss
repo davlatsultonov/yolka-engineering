@@ -2,18 +2,13 @@
   display: flex;
   align-items: flex-end;
   padding-top: 35px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: $layer-1;
+  $super: &;
 
   @media #{$sm} {
     align-items: center;
   }
 
   @media #{$xs-l} {
-    position: relative;
     padding: 30px 25px;
     flex-direction: column-reverse;
     background-color: #fff;
@@ -110,13 +105,8 @@
       }
     }
 
-
-
     > .list__item > .list__link {
-
-      @media #{$xs-l} {
-        color: #000;
-      }
+      color: #000;
     }
   }
 
@@ -124,6 +114,37 @@
 
     &-hamburger {
       margin-top: 4px;
+    }
+  }
+
+  &--transparent {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: $layer-1;
+
+    @media #{$xs-l} {
+      position: relative;
+    }
+
+    #{$super}__list {
+
+      > .list__item > .list__link {
+        color: #fff;
+
+        @media #{$xs-l} {
+          color: #000;
+        }
+      }
+    }
+
+    #{$super}__btn-hamburger {
+      background-image: url("../../images/icons/hamburger.svg");
+
+      @media #{$xs-l} {
+        background-image: url("../../images/icons/hamburger--black.svg");
+      }
     }
   }
 }

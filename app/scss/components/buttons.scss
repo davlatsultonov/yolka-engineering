@@ -6,9 +6,15 @@
 }
 
 .hamburger-btn {
-  background-color: transparent;
   border: none;
   cursor: pointer;
+  width: 20px;
+  height: 14px;
+  background: transparent url("../../images/icons/hamburger.svg") no-repeat;
+
+  &--black {
+    background-image: url("../../images/icons/hamburger--black.svg");
+  }
 }
 
 .button {
