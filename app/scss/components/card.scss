@@ -192,4 +192,13 @@
       }
     }
   }
+
+  .logos {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media #{$xs-l} {
+      margin-top: 20px;
+    }
+  }
 }

@@ -58,6 +58,7 @@
   @media #{$md} {
     --cols-3: 2;
     --cols-4: 3;
+    grid-column-gap: 32px;
   }
 
   @media #{$sm} {
