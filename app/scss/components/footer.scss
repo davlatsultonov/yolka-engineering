@@ -95,6 +95,17 @@
     &.list--inline {
       justify-content: center;
       text-align: center;
+
+      > .list__item {
+
+        &:not(:last-child) {
+
+          @media #{$xs-l} {
+            margin-right: 0;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
   }
 

@@ -67,6 +67,10 @@
       @media #{$lg} {
         margin-right: 30px;
       }
+
+      @media #{$md} {
+        margin-right: 0;
+      }
     }
 
     &--right {
