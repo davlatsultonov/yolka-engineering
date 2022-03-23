@@ -41,6 +41,10 @@ ul {
 	@media #{$xs} {
 		padding: 0 10px;
 	}
+
+	h1 {
+		margin-bottom: 20px;
+	}
 }
 
 a{
@@ -54,7 +58,6 @@ h1, h2, h3 {
 
 h1 {
 	font-size: 34px;
-	text-transform: uppercase;
 
 	@media #{$md} {
 		font-size: 24px;
@@ -102,5 +105,9 @@ p {
 
 	&-center {
 		text-align: center;
+	}
+
+	&-uppercase {
+		text-transform: uppercase;
 	}
 }
