@@ -1,9 +1,11 @@
+@import "mixins";
 @import "vars";
 @import "fonts";
 @import "reset";
 @import "global";
 // components
 @import "components/breadcrumbs";
+@import "components/banner";
 @import "components/list";
 @import "components/side-menu";
 @import "components/columns";
@@ -16,6 +18,7 @@
 @import "components/buttons";
 @import "components/achievements";
 @import "components/rotate-device";
+@import "components/video";
 @import "visibility";
 @import "../../node_modules/owl.carousel/src/scss/owl.carousel";
 @import "../../node_modules/owl.carousel/src/scss/owl.theme.default";

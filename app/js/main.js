@@ -29,8 +29,8 @@ $(document).ready(function(){
 
     // video
     $(document).on('click', '#video-play-btn', function () {
-        const videoBlockWrapper = $(".card__video");
-        const videoBlockOverlay = videoBlockWrapper.find('.card__video-overlay');
+        const videoBlockWrapper = $(".video");
+        const videoBlockOverlay = videoBlockWrapper.find('.video__overlay');
         const videoBlock = videoBlockWrapper.find('#video');
         videoBlockWrapper.css('border', '1px solid rgba(89,89,89,0.62)');
         videoBlock.attr('controls', 'true')[0].play();
