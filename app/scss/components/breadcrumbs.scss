@@ -1,0 +1,40 @@
+.breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  li {
+    color: #6e6e6e;
+    line-height: 1;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    &:not(:first-child) {
+
+      &:before {
+        content: '/';
+        display: inline-block;
+        vertical-align: top;
+        margin-left: 5px;
+      }
+    }
+
+    a {
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &--with-indents {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    @media #{$xs-l} {
+      margin-top: 0;
+    }
+  }
+}
