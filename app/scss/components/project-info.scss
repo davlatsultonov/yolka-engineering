@@ -1,7 +1,7 @@
 .project-info {
   display: flex;
   padding: 18px 57px 39px;
-  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: $base-shadow;
   border-radius: $base-border-radius;
 
   @media #{$xs-l} {

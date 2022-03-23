@@ -1,7 +1,6 @@
 .cards-group {
   padding-top: 40px;
   padding-bottom: 40px;
-  overflow: hidden;
 
   &__item {
 
@@ -101,6 +100,16 @@
         margin-top: 10px;
       }
     }
+
+    &--indent-v {
+      margin-top: 15px;
+      margin-bottom: 15px;
+
+      @media #{$xs} {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
   }
 
   &__icon {
@@ -162,6 +171,36 @@
 
   p ~ .button {
     margin-top: 15px;
+  }
+
+  &--compact {
+    box-shadow: $base-shadow;
+    border-radius: $base-border-radius;
+    padding: 20px 20px 50px;
+    position: relative;
+    transition: box-shadow .3s;
+
+    .card__img {
+      background-size: contain;
+
+      @media #{$xxs} {
+        background-size: cover;
+      }
+    }
+
+    .button {
+      position: absolute;
+      bottom: 25px;
+      right: 20px;
+    }
+
+    &:hover {
+      box-shadow: $base-shadow-hover;
+
+      .button {
+        text-decoration: underline;
+      }
+    }
   }
 
   &--video {

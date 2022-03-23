@@ -55,6 +55,10 @@
     }
   }
 
+  &--gap-thin {
+    grid-column-gap: 25px;
+  }
+
   @media #{$md} {
     --cols-3: 2;
     --cols-4: 3;
