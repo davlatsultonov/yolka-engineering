@@ -1,28 +1,27 @@
 .banner {
+  --bannerHeight: 380px;
 
   &__img, &__video {
-    --bannerMaxHeight: 380px;
-    height: 100%;
-    max-height: var(--bannerMaxHeight);
+    height: var(--bannerHeight);
     border-radius: $base-border-radius;
     overflow: hidden;
 
     video {
       width: 100%;
-      height: var(--bannerMaxHeight);
+      height: var(--bannerHeight);
     }
 
     @media #{$md} {
-      --bannerMaxHeight: 285px;
+      --bannerHeight: 285px;
     }
 
     @media #{$xs-l} {
-      --bannerMaxHeight: 214px;
+      --bannerHeight: 214px;
     }
   }
 
   &__img {
-    height: inherit;
+    height: var(--bannerHeight);
     @include background-cover;
   }
 }

@@ -8,13 +8,13 @@
     &:not(:last-of-type) {
       margin-bottom: 40px;
     }
+  }
 
-    & ~ h1 {
-      margin-bottom: 40px;
+  h1 + .cards-group__item {
+    margin-top: 40px;
 
-      @media #{$xs-l} {
-        margin-bottom: 20px;
-      }
+    @media #{$xs-l} {
+      margin-top: 20px;
     }
   }
 }
