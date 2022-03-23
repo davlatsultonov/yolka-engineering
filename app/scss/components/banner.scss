@@ -25,8 +25,4 @@
     height: inherit;
     @include background-cover;
   }
-
-  &--indent-bottom {
-    margin-bottom: 40px;
-  }
 }

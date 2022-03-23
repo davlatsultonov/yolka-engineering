@@ -103,6 +103,16 @@
     }
   }
 
+  &__icon {
+    display: inline-flex;
+    height: 52px;
+    align-items: center;
+
+    & + h1, & + h2, & + h3 {
+      margin-top: 20px;
+    }
+  }
+
   &__video {
     --maxHeight: 361px;
     max-height: var(--maxHeight);

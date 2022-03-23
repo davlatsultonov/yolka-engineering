@@ -1,48 +1,32 @@
 .achievements {
   padding-top: 35px;
-  padding-bottom: 43px;
+  padding-bottom: 35px;
   background: $base-green url("../../images/icons/achievements-bg-shape.svg") repeat;
   background-size: 150px;
   color: #fff;
 
   &__items {
-    display: flex;
-
-    @media #{$md} {
-      justify-content: space-between;
-    }
+    --achievmentBlockColumns: 3;
+    display: grid;
+    grid-template-columns: repeat(var(--achievmentBlockColumns), auto);
+    grid-row-gap: 40px;
+    grid-column-gap: 50px;
 
     @media (max-width: 928px) {
-      flex-direction: column;
-      align-items: center;
+      --achievmentBlockColumns: 2;
+      justify-items: center;
+    }
+
+    @media #{$xs-l} {
+      --achievmentBlockColumns: 1;
     }
   }
 
   &__item {
+    width: 100%;
 
-    @media (max-width: 928px) {
-      max-width: 320px;
-      width: 100%;
-    }
-
-    @media #{$xs} {
-      max-width: 95%;
-    }
-
-    &:not(:last-of-type) {
-      margin-right: 143px;
-
-      @media #{$lg} {
-        margin-right: 60px;
-      }
-
-      @media #{$md} {
-        margin-right: 0;
-      }
-
-      @media (max-width: 928px) {
-        margin-bottom: 30px;
-      }
+    @media #{$xs-l} {
+      max-width: 85%;
     }
   }
 
@@ -55,8 +39,65 @@
     }
   }
 
+  &__cards {
+
+    @media #{$xs} {
+      text-align: center;
+    }
+
+    .card__icon {
+      margin-top: 25px;
+
+      @media #{$xs} {
+        margin-top: 10px;
+      }
+    }
+  }
+
   &__desc {
     margin-top: 6px;
     font-size: 24px;
+  }
+
+  &__bottom {
+    border-top: 1px solid #fff;
+    padding-top: 30px;
+    margin-top: 35px;
+  }
+
+  &__order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    @media #{$xs-l} {
+      flex-direction: column;
+    }
+
+    * {
+      font-size: 18px;
+    }
+
+    p {
+      max-width: 420px;
+      width: 100%;
+      margin-bottom: 0;
+      margin-right: 20px;
+
+      @media #{$xs-l} {
+        margin-right: 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  .button--compact {
+    border-color: #fff;
+    background-color: #fff;
+    min-width: 190px;
+    padding-top: 9px;
+    padding-bottom: 9px;
   }
 }

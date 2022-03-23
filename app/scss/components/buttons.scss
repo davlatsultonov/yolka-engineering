@@ -45,6 +45,7 @@
 
   &--compact {
     @include compact-button;
+    justify-content: center;
   }
 
   &--compact-mobile {
