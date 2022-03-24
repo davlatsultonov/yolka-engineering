@@ -1,5 +1,6 @@
 .column {
   --cols-2: repeat(2, 47.9%);
+  --cols-2-cards: repeat(2, 47.9%);
   --cols-3: 3;
   --cols-4: 4;
   $super: &;
@@ -13,6 +14,10 @@
 
   &--2 {
     grid-template-columns: var(--cols-2);
+  }
+
+  &--2-cards {
+    grid-template-columns: var(--cols-2-cards);
 
     .card__video video {
 
@@ -30,7 +35,7 @@
     grid-template-columns: repeat(var(--cols-4), 1fr);
   }
 
-  &--2, &--3 {
+  &--2-cards, &--3 {
 
     .card p:last-of-type {
       margin-bottom: 30px;
@@ -43,7 +48,7 @@
 
   &--reversed {
 
-    &.column--2 {
+    &.column--2-cards {
 
       &:nth-child(even) .column__item:last-child {
         order:-1;
@@ -60,13 +65,14 @@
   }
 
   @media #{$md} {
+    --cols-2: 1;
     --cols-3: 2;
     --cols-4: 3;
     grid-column-gap: 32px;
   }
 
   @media #{$sm} {
-    --cols-2: repeat(1, 1fr);
+    --cols-2-cards: repeat(1, 1fr);
     --cols-4: 2;
   }
 

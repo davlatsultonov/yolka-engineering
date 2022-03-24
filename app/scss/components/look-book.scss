@@ -1,0 +1,96 @@
+.look-book {
+  --lookBookItemsGap: 10px;
+  max-width: 613px;
+
+  @media #{$md} {
+    max-width: 100%;
+  }
+
+  &__row {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: var(--lookBookItemsGap);
+    }
+
+    @media #{$xxs} {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    height: 270px;
+    border-radius: $base-border-radius;
+    overflow: hidden;
+
+    &:not(:last-child) {
+      margin-right: var(--lookBookItemsGap);
+
+      @media #{$xxs} {
+        margin-right: 0;
+        margin-bottom: var(--lookBookItemsGap);
+      }
+    }
+
+    @media #{$sm} {
+      height: 240px;
+    }
+
+    @media #{$xs} {
+      height: 210px;
+    }
+
+    @media #{$xxs} {
+      height: 170px;
+    }
+
+    &.--full {
+      width: 100%;
+    }
+
+    &.--half {
+      width: 50%;
+      height: 230px;
+
+      @media #{$sm} {
+        height: 200px;
+      }
+
+      @media #{$xs} {
+        height: 170px;
+      }
+
+      @media #{$xxs} {
+        width: 100%;
+      }
+    }
+
+    &.--text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f4f4f4 url("../../images/pattern/look-book-pattern.svg");
+
+
+      * {
+        color: $base-green;
+        font-weight: 400;
+      }
+
+      h1 {
+        font-size: 42px;
+
+        @media #{$xs} {
+          font-size: 34px;
+        }
+      }
+    }
+  }
+
+  &__img {
+    height: 100%;
+    width: 100%;
+    @include background-cover;
+  }
+}
