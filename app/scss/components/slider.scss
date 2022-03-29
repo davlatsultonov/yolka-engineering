@@ -7,6 +7,7 @@
 }
 
 .slider {
+  $super: &;
 
   &__item {
     position: relative;
@@ -17,9 +18,8 @@
     height: 100%;
     max-height: 665px;
     min-height: 665px;
-    background-size: cover;
-    background-repeat: no-repeat;
     position: relative;
+    @include background-cover;
 
     &:before {
       content: '';
@@ -106,6 +106,79 @@
   .owl-nav, .owl-dots {
     bottom: 0;
   }
+
+  &--project {
+
+    #{$super}__img {
+      --project-slider-height: 576px;
+      max-width: 954px;
+      max-height: var(--project-slider-height);
+      min-height: var(--project-slider-height);
+      border-radius: $base-border-radius;
+      margin: 0 auto;
+
+      &:before {
+        display: none;
+      }
+
+      @media #{$md} {
+        --project-slider-height: 476px;
+      }
+
+      @media #{$xs-l} {
+        --project-slider-height: 360px;
+      }
+    }
+
+    #{$super}__title {
+      position: absolute;
+      left: 50%;
+      bottom: 15px;
+      transform: translateX(-50%);
+      padding: 11px 36px;
+      text-align: center;
+      overflow: hidden;
+
+      h1 {
+        font-size: 18px;
+        text-transform: none;
+        line-height: 1.2;
+      }
+
+      h2 {
+        margin-top: 8px;
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      @media #{$xs-l} {
+        min-width: 100%;
+        width: 100%;
+      }
+
+      @media #{$xs} {
+        padding-left: 10px;
+        padding-right: 10px;
+        text-align: left;
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        backdrop-filter: blur(9px) brightness(1) invert(25%);
+        border-radius: 5px;
+
+        @media #{$xs-l} {
+          border-radius: 0;
+        }
+      }
+    }
+  }
 }
 
 @supports not (backdrop-filter: blur(10px)) {
@@ -122,13 +195,35 @@
       }
     }
 
-
     &__title {
 
       &:before {
 
         @media #{$xs-l} {
           display: none;
+        }
+      }
+    }
+
+    &--project {
+
+      .slider__title {
+
+        &:before {
+          content: "";
+          position: absolute;
+          display: block;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 5px;
+          background-color: rgba(0, 0, 0, 0.4);
+
+          @media #{$xs-l} {
+            border-radius: 0;
+          }
         }
       }
     }
@@ -154,6 +249,32 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+  }
+}
+
+.slider-hash-navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 954px;
+  width: 100%;
+  margin: 20px auto 0;
+
+  li {
+    max-width: 64px;
+    width: 100%;
+    height: 60px;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+  }
+
+  a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: $base-border-radius;
+    @include background-cover;
   }
 }
 

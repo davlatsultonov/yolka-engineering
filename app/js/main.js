@@ -1,5 +1,6 @@
 $(document).ready(function(){
     const $slider = $('.slider');
+    const $sliderProject = $('.slider--project');
     const $hasSliderChildren = $slider.children().length > 1;
     $slider.owlCarousel({
         loop:false,
@@ -13,6 +14,11 @@ $(document).ready(function(){
         touchDrag: $hasSliderChildren,
         mouseDrag: $hasSliderChildren,
     })
+
+    $sliderProject.find('.slider__title').each((i, item) => {
+        $(item).css('min-width', $(window).width() > 640 ? $(item).width() + 70 : '100%');
+    })
+
     if ($hasSliderChildren) $('#slider-nav').width($('#slider-dots').width() + ($(window).width() < 480 ? 120 : 160)).height($('#slider-dots').height())
 
     $(document).on('click', '#hamburger-btn', function () {
