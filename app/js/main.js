@@ -1,15 +1,16 @@
 $(document).ready(function(){
     const $slider = $('.slider');
     const $sliderProject = $('.slider--project');
+    const $isSliderProject = $sliderProject.length;
     const $hasSliderChildren = $slider.children().length > 1;
     $slider.owlCarousel({
-        loop:false,
+        loop: true,
         nav: $hasSliderChildren,
-        dots: $hasSliderChildren,
+        dots: $hasSliderChildren && !$isSliderProject,
         items: 1,
-        navText: $hasSliderChildren ? ["<img src='images/icons/slider_arrow-left.svg'>", "<img src='images/icons/slider_arrow-right.svg'>"] : [],
-        navContainer: '#slider-nav',
-        dotsContainer:'#slider-dots',
+        navText: $hasSliderChildren ? [`<img alt='slider-arrow-icon' src='images/icons/slider_arrow-left${$isSliderProject ? '--green' : ''}.svg'>`, `<img alt='slider-arrow-icon' src='images/icons/slider_arrow-right${$isSliderProject ? '--green' : ''}.svg'>`] : [],
+        navContainer: `#slider${$isSliderProject ? '-project' : ''}-nav`,
+        dotsContainer: $isSliderProject ? false : '#slider-dots',
         autoHeight:true,
         touchDrag: $hasSliderChildren,
         mouseDrag: $hasSliderChildren,
