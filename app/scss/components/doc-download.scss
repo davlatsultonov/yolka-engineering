@@ -20,4 +20,12 @@
     color: #0f9589;
     text-decoration: underline;
   }
+
+  &--small {
+
+    h2 {
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+  }
 }

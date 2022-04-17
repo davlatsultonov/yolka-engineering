@@ -96,6 +96,20 @@
       }
     }
 
+    &--medium {
+      --minHeight: 305px;
+      --maxHeight: 100%;
+
+      @media #{$sm} {
+        --maxHeight: 230px;
+        --minHeight: var(--maxHeight);
+      }
+
+      @media #{$xs} {
+        --maxHeight: 218px;
+      }
+    }
+
     &--small {
       --maxHeight: 165px;
       --minHeight: var(--maxHeight);
@@ -191,12 +205,36 @@
   hr {
     background-color: #ccc;
     margin-top: 30px;
-    margin-bottom: 30px;
+  }
+
+  .logos {
+    padding-top: 0;
+    padding-bottom: 0;
+
+    @media #{$xs-l} {
+      margin-top: 20px;
+    }
+  }
+
+  &--compact, &--document {
+    box-shadow: $base-shadow;
+    border-radius: $base-border-radius;
+    overflow: hidden;
+
+    .card__img {
+      border-radius: 0;
+    }
+
+    &:hover {
+      box-shadow: $base-shadow-hover;
+
+      .button {
+        text-decoration: underline;
+      }
+    }
   }
 
   &--compact {
-    box-shadow: $base-shadow;
-    border-radius: $base-border-radius;
     padding: 20px 20px 50px;
     position: relative;
     transition: box-shadow .3s;
@@ -213,14 +251,6 @@
       position: absolute;
       bottom: 25px;
       right: 20px;
-    }
-
-    &:hover {
-      box-shadow: $base-shadow-hover;
-
-      .button {
-        text-decoration: underline;
-      }
     }
   }
 
@@ -253,12 +283,40 @@
     }
   }
 
-  .logos {
-    padding-top: 0;
-    padding-bottom: 0;
+  &--document {
 
-    @media #{$xs-l} {
-      margin-top: 20px;
+    .card__img {
+      padding: 20px;
+
+      * {
+        color: #fff;
+        margin-bottom: 10px;
+      }
+
+      &--logo {
+        background-size: 192px;
+        background-position: center 68%;
+        border-bottom: 1px solid #ccc;
+
+        @media #{$sm} {
+          background-size: 150px;
+          background-position-y: 78%;
+        }
+
+        * {
+          color: #3e3e3e;
+        }
+      }
+    }
+
+    .card__bottom {
+      margin: 0;
+      position: relative;
+      padding: 30px 20px 45px;
+
+      @media #{$xs-l} {
+        padding-bottom: 30px;
+      }
     }
   }
 }
