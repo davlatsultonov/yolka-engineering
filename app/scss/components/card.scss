@@ -147,6 +147,7 @@
   &__video {
     --maxHeight: 361px;
     max-height: var(--maxHeight);
+    min-height: var(--maxHeight);
     height: 100%;
 
     & ~ .card__title {
