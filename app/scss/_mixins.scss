@@ -3,3 +3,11 @@
   background-size: cover;
   background-position: center;
 }
+
+@mixin ellipsis($number) {
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $number;
+  overflow: hidden;
+}

@@ -1,0 +1,73 @@
+.info-card {
+  display: flex;
+  color: #000;
+
+  > div:first-child {
+    margin-right: 10px;
+  }
+
+  h2 {
+    font-weight: 500;
+    @include ellipsis(2);
+
+    @media #{$xs-l} {
+      font-size: 18px;
+    }
+
+    @media #{$xs} {
+      -webkit-line-clamp: 3;
+    }
+
+    & + .info-source, & + a {
+      margin-top: 10px;
+
+      @media #{$xs-l} {
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  a {
+    display: inline-block;
+    font-size: 14px;
+    color: #0f9589;
+    text-decoration: underline;
+  }
+
+  img {
+    min-width: 24px;
+  }
+
+  &--small {
+
+    h2 {
+      font-size: 16px;
+
+      & + .info-source, & + a {
+        margin-top: 6px;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.info-source {
+  color: #000;
+  font-size: 14px;
+
+  p {
+    line-height: 1.5;
+
+    &.info-source__date {
+      color: #555;
+      line-height: normal;
+    }
+
+    &:not(:last-of-type) {
+      margin-bottom: 6px;
+    }
+  }
+}
