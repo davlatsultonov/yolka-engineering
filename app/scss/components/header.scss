@@ -144,10 +144,10 @@
     }
 
     #{$super}__btn-hamburger {
-      background-image: url("../../images/icons/hamburger.svg");
+      background-image: url("../images/icons/hamburger.svg");
 
       @media #{$xs-l} {
-        background-image: url("../../images/icons/hamburger--black.svg");
+        background-image: url("../images/icons/hamburger--black.svg");
       }
     }
   }
