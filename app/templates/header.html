@@ -45,7 +45,14 @@
                 <a href="tel:+7(383)200-03-33" class="list__link">+7 (383) 200-03-33</a>
             </li>
             <li class="list__item">
-                <button id="hamburger-btn" class="hamburger-btn header__btn-hamburger"></button>
+                @@if (home === true) {
+                    <button id="hamburger-btn" class="hamburger-btn header__btn-hamburger"></button>
+                }
+
+                @@if (home !== true) {
+                    <button id="hamburger-btn" class="hamburger-btn hamburger-btn--black header__btn-hamburger"></button>
+                }
+
                 <div class="side-menu" id="side-menu">
                     <div class="side-menu__header">
                         <a href="/" class="logo header__logo">
