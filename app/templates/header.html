@@ -5,15 +5,12 @@
         <h1 class="rotate-device__title">Это необходимо для корректного отображения сайта.</h1>
     </div>
 </div>
-<header
-        class="header @@class container"
->
+<header class="header @@class container">
     <a href="/" class="logo header__logo">
         @@if (home === true) {
             <img class="header__logo-desktop" src="images/icons/logo-white.svg" alt="logo">
             <img class="header__logo-mobile" src="images/icons/logo-green.svg" alt="logo">
         }
-
         @@if (home !== true) {
             <img  src="images/icons/logo-green.svg" alt="logo">
         }

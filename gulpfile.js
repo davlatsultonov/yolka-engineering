@@ -8,6 +8,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const imagemin = require('gulp-imagemin');
 const del = require('del');
 const fileinclude = require('gulp-file-include');
+const htmlmin = require('gulp-htmlmin');
 
 function browsersync() {
     browserSync.init({
@@ -69,6 +70,7 @@ function html() {
             prefix: '@@',
             basepath: '@file'
         }))
+        .pipe(htmlmin({ collapseWhitespace: true }))
         .pipe(dest('dist'))
 }
 
@@ -77,7 +79,6 @@ function build() {
         'app/css/style.min.css',
         'app/fonts/**/*',
         'app/js/main.min.js',
-        'app/*.html'
     ], { base: 'app' })
         .pipe(dest('dist'))
 }
@@ -97,5 +98,5 @@ exports.scripts = scripts;
 exports.images = images;
 exports.cleanDist = cleanDist;
 
-exports.build = series(cleanDist, images, build);
+exports.build = series(cleanDist, images, html, build);
 exports.default = parallel(html, styles, scripts, browsersync, watching)
