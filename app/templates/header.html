@@ -43,76 +43,79 @@
             </li>
             <li class="list__item">
                 @@if (home === true) {
-                    <button id="hamburger-btn" class="hamburger-btn header__btn-hamburger"></button>
+                    <button data-id="hamburger-btn" class="hamburger-btn header__btn-hamburger"></button>
                 }
 
                 @@if (home !== true) {
-                    <button id="hamburger-btn" class="hamburger-btn hamburger-btn--black header__btn-hamburger"></button>
+                    <button data-id="hamburger-btn" class="hamburger-btn hamburger-btn--black header__btn-hamburger"></button>
                 }
 
                 <div class="side-menu" id="side-menu">
-                    <div class="side-menu__header">
-                        <a href="/" class="logo header__logo">
-                            <img src="images/icons/logo-white.svg" alt="logo">
-                        </a>
-                        <button class="side-menu__btn-close" id="side-menu-close-btn">
-                            <img src="images/icons/close-icon.svg" alt="close icon">
-                        </button>
+                    <div class="back-drop"></div>
+                    <div class="side-menu__inner">
+                        <div class="side-menu__header">
+                            <a href="/" class="logo header__logo">
+                                <img src="images/icons/logo-white.svg" alt="logo">
+                            </a>
+                            <button class="side-menu__btn-close" id="side-menu-close-btn">
+                                <img src="images/icons/close-icon.svg" alt="close icon">
+                            </button>
+                        </div>
+                        <ul class="list list--side-menu">
+                            <li class="list__item">
+                                <a href="development.html" class="list__link">Девелопмент и строительство</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Консалтинг и аналитика</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Маркетинг и реклама</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Менeджмент и управление</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Образование и практика</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Общественная деятельность</a>
+                            </li>
+                        </ul>
+                        <ul class="list list--side-menu">
+                            <li class="list__item">
+                                <a href="about.html" class="list__link">О компании</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="brandbook.html" class="list__link">Брендбук ЁЛКА</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="press.html" class="list__link">Упоминание в прессе</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Обратная связь</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Официальные документы</a>
+                            </li>
+                        </ul>
+                        <ul class="list list--side-menu">
+                            <li class="list__item">
+                                <a href="#" class="list__link">Инвесторам</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Риэлторам</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Тендеры</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="#" class="list__link">Вакансии</a>
+                            </li>
+                            <li class="list__item">
+                                <a href="contacts.html" class="list__link">Контакты</a>
+                            </li>
+                        </ul>
                     </div>
-                    <ul class="list list--side-menu">
-                        <li class="list__item">
-                            <a href="development.html" class="list__link">Девелопмент и строительство</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Консалтинг и аналитика</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Маркетинг и реклама</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Менeджмент и управление</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Образование и практика</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Общественная деятельность</a>
-                        </li>
-                    </ul>
-                    <ul class="list list--side-menu">
-                        <li class="list__item">
-                            <a href="about.html" class="list__link">О компании</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="brandbook.html" class="list__link">Брендбук ЁЛКА</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="press.html" class="list__link">Упоминание в прессе</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Обратная связь</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Официальные документы</a>
-                        </li>
-                    </ul>
-                    <ul class="list list--side-menu">
-                        <li class="list__item">
-                            <a href="#" class="list__link">Инвесторам</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Риэлторам</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Тендеры</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="#" class="list__link">Вакансии</a>
-                        </li>
-                        <li class="list__item">
-                            <a href="contacts.html" class="list__link">Контакты</a>
-                        </li>
-                    </ul>
                 </div>
 
             </li>

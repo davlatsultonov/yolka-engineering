@@ -1,0 +1,11 @@
+.back-drop {
+  display: none;
+  position: fixed;
+  @include positionExtend;
+  background-color: rgba(0, 0, 0, .44);
+  transition: opacity 3ms ease-in-out;
+}
+
+.active .back-drop {
+  display: block;
+}

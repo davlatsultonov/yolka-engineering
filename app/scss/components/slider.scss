@@ -107,6 +107,42 @@
     bottom: 0;
   }
 
+  &-banner {
+    .owl-nav, .owl-dots {
+      position: absolute;
+
+      @media #{$xs-l} {
+        position: relative;
+      }
+    }
+
+    .owl-nav, .owl-dots {
+      bottom: 0;
+    }
+
+    & + .slider-navigation {
+      bottom: 15px;
+      position: absolute;
+
+      @media #{$xs} {
+        bottom: 5px;
+      }
+
+      #slider-nav {
+        .owl-next, .owl-prev {
+
+          &:hover {
+            border-color: #fff;
+          }
+        }
+      }
+
+      #slider-dots .owl-dot.active {
+        background-color: #fff;
+      }
+    }
+  }
+
   &--project {
 
     #{$super}__img {

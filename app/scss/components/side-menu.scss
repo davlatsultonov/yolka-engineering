@@ -1,32 +1,38 @@
 .side-menu {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateX(100%);
-  min-width: 375px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: $base-green;
-  padding: 35px 15px;
-  box-shadow: 0 0 0 99999px rgba(0, 0, 0, .44);
-  z-index: $layer-2;
-  overflow: auto;
-  transition: transform .3s, opacity .2s, visibility .2s;
 
-  @media #{$xs-l} {
-    min-width: 345px;
-  }
-
-  @media #{$xxs} {
-    min-width: 100%;
-    box-shadow: none;
-  }
-
-  &.active {
+  &.active .side-menu__inner {
     opacity: 1;
     visibility: visible;
     transform: translateX(0);
+  }
+
+  &__inner {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    min-width: 375px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $base-green;
+    padding: 35px 15px;
+    z-index: $layer-2;
+    overflow: auto;
+    transition: transform .3s, opacity .2s, visibility .2s;
+
+    @media #{$xs-l} {
+      min-width: 345px;
+    }
+
+    @media #{$xxs} {
+      min-width: 100%;
+      box-shadow: none;
+    }
+  }
+
+  .back-drop {
+    z-index: $layer-1;
   }
 
   &__header {

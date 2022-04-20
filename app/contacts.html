@@ -18,8 +18,21 @@
                     Офис компании Корпорация Елка
                 </li>
             </ul>
-            <div class="banner">
-                <div class="banner__img" style="background-image: url('images/banners/contacts.jpeg')"></div>
+            <div class="slider-wrapper owl-theme">
+                <div class="banner slider-banner owl-carousel">
+                    <div class="banner__img blurred-img">
+                        <div class="blurred-img__front" style="background-image: url('images/banners/contacts.jpeg')"></div>
+                    </div>
+                    <div class="banner__img blurred-img">
+                        <div class="blurred-img__front" style="background-image: url('images/slider/contacts.jpeg')"></div>
+                    </div>
+                </div>
+                <div class="slider-navigation">
+                    <div class="container">
+                        <div id="slider-nav" class="owl-nav"></div>
+                        <div id="slider-dots" class="owl-dot"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="achievements achievements--indent-top">
@@ -45,14 +58,18 @@
             <div class="slider-wrapper owl-theme">
                 <div class="slider slider--project owl-carousel">
                     <div class="slider__item" data-hash="project-slider-1">
-                        <div class="slider__img" style="background-image: url('images/slider/img_1_project.jpg');"></div>
+                        <div class="slider__img blurred-img">
+                            <div class="blurred-img__front" style="background-image: url('images/slider/img_1_project.jpg')"></div>
+                        </div>
                         <div class="slider__title">
                             <h1>Вид на озеро из большинства квартир</h1>
                             <h2>Своя набережная и красивый лес вокруг</h2>
                         </div>
                     </div>
                     <div class="slider__item" data-hash="project-slider-2">
-                        <div class="slider__img" style="background-image: url('images/slider/img.jpg');"></div>
+                        <div class="slider__img blurred-img">
+                            <div class="blurred-img__front" style="background-image: url('images/slider/contacts.jpeg')"></div>
+                        </div>
                         <div class="slider__title">
                             <h1>Культура планировочных решений</h1>
                         </div>
@@ -63,10 +80,14 @@
                 </div>
                 <ul class="slider-hash-navigation">
                     <li>
-                        <a href="#project-slider-1" style="background-image: url('images/slider/img_1_project.jpg')"></a>
+                        <a href="#project-slider-1" class="slider-hash-navigation__img blurred-img">
+                            <div class="blurred-img__front" style="background-image: url('images/slider/img_1_project.jpg')"></div>
+                        </a>
                     </li>
                     <li>
-                        <a href="#project-slider-2" style="background-image: url('images/slider/img.jpg')"></a>
+                        <a href="#project-slider-2" class="slider-hash-navigation__img blurred-img">
+                            <div class="blurred-img__front" style="background-image: url('images/slider/contacts.jpeg')"></div>
+                        </a>
                     </li>
                 </ul>
             </div>

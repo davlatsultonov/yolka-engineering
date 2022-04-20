@@ -1,0 +1,27 @@
+.blurred-img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+
+  &__front, &__back {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__front {
+    @include background-cover;
+    position: absolute;
+    z-index: 3;
+  }
+
+  &__back {
+    @include background-cover;
+    position: absolute;
+    z-index: 2;
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+  }
+}
