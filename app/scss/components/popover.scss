@@ -1,0 +1,42 @@
+.popover {
+  box-shadow: $base-shadow;
+  border-radius: $base-border-radius;
+  background-color: #fff;
+  text-align: center;
+  padding: 15px;
+  max-width: 300px;
+  width: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  @media #{$xs} {
+    max-width: 280px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  & > * {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  a {
+    margin-top: 10px;
+    text-decoration: underline;
+  }
+
+  &:after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-width: 15px 15px 0 15px;
+    border-color: #fff transparent transparent transparent;
+    border-style: solid;
+    position: absolute;
+    bottom: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

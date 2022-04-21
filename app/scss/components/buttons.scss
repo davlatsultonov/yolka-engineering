@@ -35,16 +35,9 @@
     margin-left: 15px;
   }
 
-  &--color-green {
-    color: $base-green;
-  }
-
-  &--color-white {
-    color: #fff;
-  }
-
   &--compact {
     @include compact-button;
+    font-size: 16px;
     justify-content: center;
   }
 
@@ -53,5 +46,19 @@
     @media #{$xs} {
       @include compact-button;
     }
+  }
+
+  &--color-green {
+    color: $base-green;
+  }
+
+  &--background-green {
+    background-color: $base-green;
+    border-color: $base-green;
+    color: #fff;
+  }
+
+  &--color-white {
+    color: #fff;
   }
 }

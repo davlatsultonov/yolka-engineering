@@ -35,6 +35,10 @@
   &__desc {
     margin-left: 70px;
 
+    & > p + .button {
+      margin-top: 20px;
+    }
+
     @media #{$xs-l} {
       margin-left: 0;
       margin-top: 40px;
@@ -56,6 +60,55 @@
 
           @media #{$xs-l} {
             margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  &__map {
+    min-height: 270px;
+    @include background-cover;
+
+    @media #{$xs-l} {
+      min-height: 240px;
+    }
+  }
+
+  &--with-map {
+    display: block;
+    padding: 0;
+    overflow: hidden;
+
+    .project-info__desc {
+      margin: 20px 110px 36px 40px;
+
+      @media #{$md} {
+        margin-left: 50px;
+        margin-right: 50px;
+      }
+
+      @media #{$sm} {
+        margin-top: 0;
+      }
+
+      @media #{$xs-l} {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+    }
+
+    .project-info__list {
+
+      &.list--inline {
+
+        > .list__item {
+
+          &:not(:last-child) {
+
+            @media #{$xs-l} {
+              margin-bottom: 0;
+            }
           }
         }
       }

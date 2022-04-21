@@ -68,6 +68,11 @@
     grid-column-gap: 25px;
   }
 
+  &--no-gap {
+    grid-column-gap: 0;
+    --cols-2: repeat(2, 1fr);
+  }
+
   @media #{$md} {
     --cols-2: 1;
     --cols-3: 2;
