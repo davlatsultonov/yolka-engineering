@@ -45,6 +45,12 @@
     }
   }
 
+  h4 {
+    & + p {
+      margin-top: 15px;
+    }
+  }
+
   &__title {
 
     &-buttons {
@@ -182,14 +188,6 @@
       position: relative;
       margin-top: 20px;
     }
-
-    .button {
-      float: right;
-
-      @media #{$xs} {
-        float: none;
-      }
-    }
   }
 
   &__column {
@@ -205,6 +203,23 @@
         margin-right: 0;
         margin-bottom: 25px;
       }
+    }
+  }
+
+  &__btn {
+
+    &-float-right {
+      float: right;
+
+      @media #{$xs} {
+        float: none;
+      }
+    }
+
+    &-fixed {
+      position: absolute;
+      bottom: 25px;
+      right: 20px;
     }
   }
 
@@ -231,6 +246,10 @@
     @media #{$xs-l} {
       margin-top: 20px;
     }
+  }
+
+  .text-center {
+    margin-top: 25px;
   }
 
   &--compact, &--document {
@@ -264,10 +283,16 @@
       }
     }
 
-    .button {
-      position: absolute;
-      bottom: 25px;
-      right: 20px;
+    .card__icon {
+      display: flex;
+      justify-content: center;
+      height: auto;
+      min-height: 108px;
+      max-height: 108px;
+
+      & + * {
+        margin-top: 15px;
+      }
     }
   }
 
@@ -419,10 +444,57 @@
     }
   }
 
+  &--text-condensed {
+
+    p {
+
+      &:not(:last-of-type) {
+        margin-bottom: 7px;
+      }
+
+      & ~ .button {
+        margin-top: 10px;
+      }
+    }
+
+    h4 {
+      & + p {
+        margin-top: 10px;
+      }
+    }
+  }
+
+  &--with-map {
+    padding-bottom: 220px;
+
+    .card__bottom {
+      position: absolute;
+    }
+
+    .card__img {
+      --maxHeight: 200px;
+      --minHeight: 200px;
+      background-size: cover;
+    }
+  }
+
+  &--soon {
+    min-height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px dashed #ccc;
+    border-radius: $base-border-radius;
+  }
+
   &:hover {
 
     a {
       text-decoration: underline;
+    }
+
+    .button--compact {
+      text-decoration: none;
     }
   }
 }

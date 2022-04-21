@@ -77,6 +77,10 @@ h3 {
 	font-size: 18px;
 }
 
+h4 {
+	font-size: 16px;
+}
+
 p {
 	line-height: normal;
 
@@ -89,31 +93,31 @@ p {
 
 	&-size {
 		&-small {
-			font-size: 14px;
+			font-size: 14px !important;
 		}
 
 		&-default {
-			font-size: 16px;
+			font-size: 16px !important;
 		}
 	}
 
 	&-weight {
 
 		&-medium {
-			font-weight: 500;
+			font-weight: 500 !important;
 		}
 
 		&-bold {
-			font-weight: 700;
+			font-weight: 700 !important;
 		}
 	}
 
 	&-center {
-		text-align: center;
+		text-align: center !important;
 	}
 
 	&-uppercase {
-		text-transform: uppercase;
+		text-transform: uppercase !important;
 	}
 }
 

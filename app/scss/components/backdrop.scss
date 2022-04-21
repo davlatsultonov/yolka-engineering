@@ -4,6 +4,7 @@
   @include positionExtend;
   background-color: rgba(0, 0, 0, .44);
   transition: opacity 3ms ease-in-out;
+  cursor: pointer;
 }
 
 .active .back-drop {
