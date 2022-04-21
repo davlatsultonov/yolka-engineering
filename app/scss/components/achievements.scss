@@ -31,11 +31,17 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
     font-size: 42px;
     text-transform: none;
 
     @media #{$xs} {
       font-size: 36px;
+    }
+
+    img {
+      margin-right: 10px;
     }
   }
 
