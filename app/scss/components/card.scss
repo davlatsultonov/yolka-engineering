@@ -481,10 +481,15 @@
   &--soon {
     min-height: 200px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     border: 1px dashed #ccc;
     border-radius: $base-border-radius;
+
+    .card__icon {
+      margin-bottom: 10px;
+    }
   }
 
   &:hover {
