@@ -474,7 +474,8 @@
     .card__img {
       --maxHeight: 200px;
       --minHeight: 200px;
-      background-size: cover;
+      background-size: 50px, cover;
+      background-position: center;
     }
   }
 
