@@ -23,7 +23,7 @@
     text-transform: none;
     font-size: 30px;
 
-    @media #{$sm} {
+    @include sm {
       font-size: 24px;
     }
   }
@@ -31,20 +31,20 @@
   svg {
     height: 200px;
 
-    @media #{$sm} {
+    @include sm {
       height: 145px;
     }
 
     & + .rotate-device__title {
       margin-top: 40px;
 
-      @media #{$sm} {
+      @include sm {
         margin-top: 25px;
       }
     }
   }
 
-  @media (min-width: 640px) and #{$md} and (orientation: landscape) {
+  @media (min-width: 640px) and (max-width: $md) and (orientation: landscape) {
     display: flex;
   }
 

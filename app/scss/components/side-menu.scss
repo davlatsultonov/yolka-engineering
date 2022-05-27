@@ -21,11 +21,11 @@
     overflow: auto;
     transition: transform .3s, opacity .2s, visibility .2s;
 
-    @media #{$xs-l} {
+    @include xsL {
       min-width: 345px;
     }
 
-    @media #{$xxs} {
+    @include xxs {
       min-width: 100%;
       box-shadow: none;
     }

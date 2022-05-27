@@ -1,3 +1,5 @@
+@use "vars";
+
 @mixin background-cover {
   background-repeat: no-repeat;
   background-size: cover;
@@ -17,4 +19,40 @@
   left: 0;
   right: 0;
   bottom: 0;
+}
+
+@mixin lg() {
+  @media (max-width: vars.$lg) {
+    @content
+  }
+}
+
+@mixin md() {
+  @media (max-width: vars.$md) {
+    @content
+  }
+}
+
+@mixin sm() {
+  @media (max-width: vars.$sm) {
+    @content
+  }
+}
+
+@mixin xsL() {
+  @media (max-width: vars.$xs-l) {
+    @content
+  }
+}
+
+@mixin xs() {
+  @media (max-width: vars.$xs) {
+    @content
+  }
+}
+
+@mixin xxs() {
+  @media (max-width: vars.$xs-l) {
+    @content
+  }
 }

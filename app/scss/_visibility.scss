@@ -11,7 +11,7 @@
     display: flex;
   }
 
-  @media #{$md} {
+  @include md {
     display: none !important;
   }
 }
@@ -23,7 +23,7 @@
     display: flex;
   }
 
-  @media #{$sm} {
+  @include sm {
     display: none !important;
   }
 }
@@ -35,7 +35,7 @@
     display: flex;
   }
 
-  @media #{$xs-l} {
+  @include xsL {
     display: none !important;
   }
 }
@@ -47,7 +47,7 @@
     display: flex;
   }
 
-  @media #{$xs} {
+  @include xs {
     display: none !important;
   }
 }
@@ -56,25 +56,25 @@
   display: none;
 
 
-  @media #{$md} {
+  @include md {
     display: block !important;
   }
 
   &--flex {
 
-    @media #{$md} {
+    @include md {
       display: flex !important;
     }
   }
 
   &--inline-flex {
-    @media #{$md} {
+    @include md {
       display: inline-flex !important;
     }
   }
 
   &--inline-block {
-    @media #{$md} {
+    @include md {
       display: inline-block !important;
     }
   }
@@ -83,25 +83,25 @@
 .visible-sm {
   display: none;
 
-  @media #{$sm} {
+  @include sm {
     display: block !important;
   }
 
   &--flex {
 
-    @media #{$sm} {
+    @include sm {
       display: flex !important;
     }
   }
 
   &--inline-flex {
-    @media #{$sm} {
+    @include sm {
       display: inline-flex !important;
     }
   }
 
   &--inline-block {
-    @media #{$sm} {
+    @include sm {
       display: inline-block !important;
     }
   }
@@ -110,25 +110,25 @@
 .visible-xs-l {
   display: none;
 
-  @media #{$xs-l} {
+  @include xsL {
     display: block !important;
   }
 
   &--flex {
 
-    @media #{$xs-l} {
+    @include xsL {
       display: flex !important;
     }
   }
 
   &--inline-flex {
-    @media #{$xs-l} {
+    @include xsL {
       display: inline-flex !important;
     }
   }
 
   &--inline-block {
-    @media #{$xs-l} {
+    @include xsL {
       display: inline-block !important;
     }
   }
@@ -137,25 +137,25 @@
 .visible-xs {
   display: none;
 
-  @media #{$xs} {
+  @include xs {
     display: block !important;
   }
 
   &--flex {
 
-    @media #{$xs} {
+    @include xs {
       display: flex !important;
     }
   }
 
   &--inline-flex {
-    @media #{$xs} {
+    @include xs {
       display: inline-flex !important;
     }
   }
 
   &--inline-block {
-    @media #{$xs} {
+    @include xs {
       display: inline-block !important;
     }
   }

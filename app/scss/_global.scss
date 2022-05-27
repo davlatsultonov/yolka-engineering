@@ -38,7 +38,7 @@ ul {
 	margin: 0 auto;
 	padding: 0 15px;
 
-	@media #{$xs} {
+	@include xs {
 		padding: 0 10px;
 	}
 
@@ -46,7 +46,7 @@ ul {
 		margin-top: 50px;
 		margin-bottom: 20px;
 
-		@media #{$md} {
+		@include md {
 			margin-top: 35px;
 		}
 	}
@@ -64,7 +64,7 @@ h1, h2, h3 {
 h1 {
 	font-size: 34px;
 
-	@media #{$md} {
+	@include md {
 		font-size: 24px;
 	}
 }

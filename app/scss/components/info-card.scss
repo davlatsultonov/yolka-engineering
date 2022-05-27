@@ -10,18 +10,18 @@
     font-weight: 500;
     @include ellipsis(2);
 
-    @media #{$xs-l} {
+    @include xsL {
       font-size: 18px;
     }
 
-    @media #{$xs} {
+    @include xs {
       -webkit-line-clamp: 3;
     }
 
     & + .info-source, & + a {
       margin-top: 10px;
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-bottom: 6px;
       }
     }

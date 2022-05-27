@@ -4,13 +4,13 @@
   box-shadow: $base-shadow;
   border-radius: $base-border-radius;
 
-  @media #{$xs-l} {
+  @include xsL {
     padding-left: 40px;
     padding-right: 40px;
     flex-direction: column;
   }
 
-  @media #{$xxs} {
+  @include xxs {
     padding-left: 18px;
     padding-right: 18px;
     flex-direction: column;
@@ -26,7 +26,7 @@
       min-width: 200px;
     }
 
-    @media #{$xs-l} {
+    @include xsL {
       min-width: 229px;
       margin: auto;
     }
@@ -39,7 +39,7 @@
       margin-top: 20px;
     }
 
-    @media #{$xs-l} {
+    @include xsL {
       margin-left: 0;
       margin-top: 40px;
     }
@@ -48,7 +48,7 @@
   &__list {
     margin-top: 44px;
 
-    @media #{$xs} {
+    @include xs {
       margin-top: 25px;
     }
 
@@ -58,7 +58,7 @@
 
         &:not(:last-child) {
 
-          @media #{$xs-l} {
+          @include xsL {
             margin-bottom: 10px;
           }
         }
@@ -70,7 +70,7 @@
     min-height: 270px;
     @include background-cover;
 
-    @media #{$xs-l} {
+    @include xsL {
       min-height: 240px;
     }
   }
@@ -83,16 +83,16 @@
     .project-info__desc {
       margin: 20px 110px 36px 40px;
 
-      @media #{$md} {
+      @include md {
         margin-left: 50px;
         margin-right: 50px;
       }
 
-      @media #{$sm} {
+      @include sm {
         margin-top: 0;
       }
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-left: 20px;
         margin-right: 20px;
       }
@@ -106,7 +106,7 @@
 
           &:not(:last-child) {
 
-            @media #{$xs-l} {
+            @include xsL {
               margin-bottom: 0;
             }
           }

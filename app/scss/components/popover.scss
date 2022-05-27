@@ -11,7 +11,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  @media #{$xs} {
+  @include xs {
     max-width: 280px;
     padding-left: 8px;
     padding-right: 8px;

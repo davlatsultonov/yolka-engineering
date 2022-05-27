@@ -12,7 +12,7 @@
   h1 + .cards-group__item {
     margin-top: 40px;
 
-    @media #{$xs-l} {
+    @include xsL {
       margin-top: 20px;
     }
   }
@@ -27,7 +27,7 @@
     & + p {
       margin-top: 30px;
 
-      @media #{$sm} {
+      @include sm {
         margin-top: 15px;
       }
     }
@@ -56,7 +56,7 @@
     &-buttons {
       float: right;
 
-      @media #{$xs} {
+      @include xs {
         float: none;
         display: block;
         margin-top: 18px;
@@ -75,7 +75,7 @@
     & ~ .card__title {
       margin-top: 25px;
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-top: 20px;
       }
     }
@@ -83,7 +83,7 @@
     & ~ .info-card {
       margin-top: 40px;
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-top: 20px;
       }
     }
@@ -92,12 +92,12 @@
       --minHeight: 361px;
       --maxHeight: 100%;
 
-      @media #{$sm} {
+      @include sm {
         --maxHeight: 230px;
         --minHeight: var(--maxHeight);
       }
 
-      @media #{$xs} {
+      @include xs {
         --maxHeight: 218px;
       }
     }
@@ -106,12 +106,12 @@
       --minHeight: 305px;
       --maxHeight: 100%;
 
-      @media #{$sm} {
+      @include sm {
         --maxHeight: 230px;
         --minHeight: var(--maxHeight);
       }
 
-      @media #{$xs} {
+      @include xs {
         --maxHeight: 218px;
       }
     }
@@ -120,7 +120,7 @@
       --maxHeight: 165px;
       --minHeight: var(--maxHeight);
 
-      @media #{$xs} {
+      @include xs {
         --maxHeight: 218px;
       }
 
@@ -133,7 +133,7 @@
       margin-top: 15px;
       margin-bottom: 15px;
 
-      @media #{$xs} {
+      @include xs {
         margin-top: 10px;
         margin-bottom: 10px;
       }
@@ -159,7 +159,7 @@
     & ~ .card__title {
       margin-top: 25px;
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-top: 20px;
       }
     }
@@ -169,11 +169,11 @@
       height: 100%;
     }
 
-    @media #{$sm} {
+    @include sm {
       --maxHeight: 230px;
     }
 
-    @media #{$xs} {
+    @include xs {
       --maxHeight: 218px;
     }
   }
@@ -185,7 +185,7 @@
     right: 0;
     overflow: hidden;
 
-    @media #{$xs} {
+    @include xs {
       position: relative;
       margin-top: 20px;
     }
@@ -196,11 +196,11 @@
     &:not(:last-of-type) {
       margin-right: 40px;
 
-      @media #{$sm} {
+      @include sm {
         margin-right: 25px;
       }
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-right: 0;
         margin-bottom: 25px;
       }
@@ -212,7 +212,7 @@
     &-float-right {
       float: right;
 
-      @media #{$xs} {
+      @include xs {
         float: none;
       }
     }
@@ -244,7 +244,7 @@
     padding-top: 0;
     padding-bottom: 0;
 
-    @media #{$xs-l} {
+    @include xsL {
       margin-top: 20px;
     }
   }
@@ -279,7 +279,7 @@
     .card__img {
       background-size: contain;
 
-      @media #{$xxs} {
+      @include xxs {
         background-size: cover;
       }
     }
@@ -302,11 +302,11 @@
     .card__img {
       --maxHeight: 401px;
 
-      @media #{$sm} {
+      @include sm {
         --maxHeight: 230px;
       }
 
-      @media #{$xs} {
+      @include xs {
         --maxHeight: 218px;
       }
     }
@@ -319,7 +319,7 @@
       position: absolute;
       bottom: -278px;
 
-      @media #{$md} {
+      @include md {
         position: relative;
         bottom: 0;
       }
@@ -341,7 +341,7 @@
         background-position: center 68%;
         border-bottom: 1px solid #ccc;
 
-        @media #{$sm} {
+        @include sm {
           background-size: 150px;
           background-position-y: 78%;
         }
@@ -357,7 +357,7 @@
       position: relative;
       padding: 30px 20px 45px;
 
-      @media #{$xs-l} {
+      @include xsL {
         padding-bottom: 30px;
       }
     }
@@ -366,13 +366,13 @@
   &--inline {
     display: flex;
 
-    @media #{$xs-l} {
+    @include xsL {
       display: block;
     }
 
     &:not(:last-child) {
 
-      @media #{$xs-l} {
+      @include xsL {
         border-bottom: 1px solid #ccc;
         padding-bottom: 30px;
       }
@@ -381,16 +381,16 @@
     .card__img {
       width: 280px;
 
-      @media #{$sm} {
+      @include sm {
         width: 200px;
       }
 
-      @media #{$xs-l} {
+      @include xsL {
         width: 280px;
         margin: auto;
       }
 
-      @media #{$xs} {
+      @include xs {
         width: 100%;
       }
     }
@@ -399,7 +399,7 @@
       display: flex;
       flex-direction: column;
 
-      @media #{$xs-l} {
+      @include xsL {
         display: block;
       }
 
@@ -408,7 +408,7 @@
         @include ellipsis(3);
         margin-bottom: 15px;
 
-        @media #{$xs-l} {
+        @include xsL {
           -webkit-line-clamp: 4;
         }
       }
@@ -416,7 +416,7 @@
       &:nth-child(2) {
         width: calc(76% - 320px);
 
-        @media #{$md} {
+        @include md {
           width: auto;
         }
       }
@@ -425,7 +425,7 @@
     .info-card {
       margin-bottom: 5px;
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-bottom: 15px;
       }
     }
@@ -434,11 +434,11 @@
 
       &:not(:last-of-type) {
 
-        @media #{$sm} {
+        @include sm {
           margin-bottom: 0;
         }
 
-        @media #{$xs-l} {
+        @include xsL {
           margin-bottom: 6px;
         }
       }

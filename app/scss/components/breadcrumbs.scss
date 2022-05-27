@@ -10,7 +10,7 @@
     margin-top: 5px;
     margin-bottom: 5px;
 
-    @media #{$xs-l} {
+    @include xsL {
       max-width: 280px;
       text-overflow: ellipsis;
       white-space: nowrap;
@@ -37,7 +37,7 @@
 
     &:last-child {
 
-      @media #{$xs-l} {
+      @include xsL {
         width: 20px;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -47,7 +47,7 @@
 
       &:after {
 
-        @media #{$xs-l} {
+        @include xsL {
           content: '...';
           display: inline;
           position: absolute;
@@ -73,7 +73,7 @@
     margin-top: 40px;
     margin-bottom: 20px;
 
-    @media #{$xs-l} {
+    @include xsL {
       margin-top: 0;
     }
   }

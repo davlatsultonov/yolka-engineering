@@ -11,11 +11,11 @@
       height: 100%;
     }
 
-    @media #{$md} {
+    @include md {
       --bannerHeight: 285px;
     }
 
-    @media #{$xs-l} {
+    @include xsL {
       --bannerHeight: 214px;
     }
   }

@@ -2,7 +2,7 @@
   --lookBookItemsGap: 10px;
   max-width: 613px;
 
-  @media #{$md} {
+  @include md {
     max-width: 100%;
   }
 
@@ -13,7 +13,7 @@
       margin-bottom: var(--lookBookItemsGap);
     }
 
-    @media #{$xxs} {
+    @include xxs {
       flex-direction: column;
     }
   }
@@ -26,21 +26,21 @@
     &:not(:last-child) {
       margin-right: var(--lookBookItemsGap);
 
-      @media #{$xxs} {
+      @include xxs {
         margin-right: 0;
         margin-bottom: var(--lookBookItemsGap);
       }
     }
 
-    @media #{$sm} {
+    @include sm {
       height: 240px;
     }
 
-    @media #{$xs} {
+    @include xs {
       height: 210px;
     }
 
-    @media #{$xxs} {
+    @include xxs {
       height: 170px;
     }
 
@@ -52,15 +52,15 @@
       width: 50%;
       height: 230px;
 
-      @media #{$sm} {
+      @include sm {
         height: 200px;
       }
 
-      @media #{$xs} {
+      @include xs {
         height: 170px;
       }
 
-      @media #{$xxs} {
+      @include xxs {
         width: 100%;
       }
     }
@@ -81,7 +81,7 @@
       h1 {
         font-size: 42px;
 
-        @media #{$xs} {
+        @include xs {
           font-size: 34px;
         }
       }

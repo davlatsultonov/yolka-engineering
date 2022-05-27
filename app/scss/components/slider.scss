@@ -1,7 +1,7 @@
 .slider-wrapper {
   position: relative;
 
-  @media #{$xs-l} {
+  @include xsL {
     background-color: #fff;
   }
 }
@@ -31,12 +31,12 @@
       z-index: 1;
       background-color: rgba(0, 0, 0, 0.5);
 
-      @media #{$xs-l} {
+      @include xsL {
         display: none;
       }
     }
 
-    @media #{$xs-l} {
+    @include xsL {
       min-height: 300px;
     }
   }
@@ -52,7 +52,7 @@
       line-height: 1;
       text-transform: uppercase;
 
-      @media #{$xs-l} {
+      @include xsL {
         font-size: 34px;
       }
     }
@@ -61,16 +61,16 @@
       font-size: 48px;
       line-height: 1;
 
-      @media #{$xs-l} {
+      @include xsL {
         font-size: 24px;
       }
     }
 
-    @media #{$sm} {
+    @include sm {
       bottom: 60px;
     }
 
-    @media #{$xs-l} {
+    @include xsL {
       width: 100%;
       left: 0;
       bottom: 0;
@@ -82,7 +82,7 @@
 
     &:before {
 
-      @media #{$xs-l} {
+      @include xsL {
         content: "";
         position: absolute;
         z-index: -1;
@@ -98,7 +98,7 @@
   .owl-nav, .owl-dots {
     position: absolute;
 
-    @media #{$xs-l} {
+    @include xsL {
       position: relative;
     }
   }
@@ -111,7 +111,7 @@
     .owl-nav, .owl-dots {
       position: absolute;
 
-      @media #{$xs-l} {
+      @include xsL {
         position: relative;
       }
     }
@@ -124,7 +124,7 @@
       bottom: 15px;
       position: absolute;
 
-      @media #{$xs} {
+      @include xs {
         bottom: 5px;
       }
 
@@ -157,11 +157,11 @@
         display: none;
       }
 
-      @media #{$md} {
+      @include md {
         --project-slider-height: 476px;
       }
 
-      @media #{$xs-l} {
+      @include xsL {
         --project-slider-height: 360px;
       }
     }
@@ -187,12 +187,12 @@
         line-height: 1.2;
       }
 
-      @media #{$xs-l} {
+      @include xsL {
         min-width: 100%;
         width: 100%;
       }
 
-      @media #{$xs} {
+      @include xs {
         padding-left: 10px;
         padding-right: 10px;
         text-align: left;
@@ -209,7 +209,7 @@
         backdrop-filter: blur(9px) brightness(1) invert(25%);
         border-radius: 5px;
 
-        @media #{$xs-l} {
+        @include xsL {
           border-radius: 0;
         }
       }
@@ -227,7 +227,7 @@
         padding: 0 20px;
       }
 
-      @media #{$xs-l} {
+      @include xsL {
         position: absolute;
         padding: 0 15px;
       }
@@ -242,7 +242,7 @@
 
       &:before {
 
-        @media #{$xs-l} {
+        @include xsL {
           display: block;
           background-color: rgba(0, 0, 0, 0.35);
         }
@@ -253,7 +253,7 @@
 
       &:before {
 
-        @media #{$xs-l} {
+        @include xsL {
           display: none;
         }
       }
@@ -275,7 +275,7 @@
           border-radius: 5px;
           background-color: rgba(0, 0, 0, 0.4);
 
-          @media #{$xs-l} {
+          @include xsL {
             border-radius: 0;
           }
         }
@@ -292,7 +292,7 @@
   right: 0;
   z-index: 1;
 
-  @media #{$xs-l} {
+  @include xsL {
     position: relative;
     bottom: 0;
     padding-top: 14px;
@@ -345,14 +345,14 @@
     border-radius: 100%;
     border: 1px solid transparent;
 
-    @media #{$xs-l} {
+    @include xsL {
       padding: 10px 14px;
     }
 
     &:hover {
       border: 1px solid #fff;
 
-      @media #{$xs-l} {
+      @include xsL {
         border-color: $base-green;
       }
     }
@@ -362,7 +362,7 @@
     right: 0;
     padding-right: 19px;
 
-    @media #{$xs-l} {
+    @include xsL {
       padding-right: 13px;
     }
   }
@@ -371,7 +371,7 @@
     left: 0;
     padding-left: 19px;
 
-    @media #{$xs-l} {
+    @include xsL {
       padding-left: 13px;
     }
   }
@@ -419,7 +419,7 @@
     &.active {
       background-color: #fff;
 
-      @media #{$xs-l} {
+      @include xsL {
         background-color: $base-green;
       }
     }

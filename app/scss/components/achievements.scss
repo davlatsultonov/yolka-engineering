@@ -17,7 +17,7 @@
       justify-items: center;
     }
 
-    @media #{$xs-l} {
+    @include xsL {
       --achievmentBlockColumns: 1;
     }
   }
@@ -25,7 +25,7 @@
   &__item {
     width: 100%;
 
-    @media #{$xs-l} {
+    @include xsL {
       max-width: 85%;
     }
   }
@@ -36,7 +36,7 @@
     font-size: 42px;
     text-transform: none;
 
-    @media #{$xs} {
+    @include xs {
       font-size: 36px;
     }
 
@@ -47,14 +47,14 @@
 
   &__cards {
 
-    @media #{$xs} {
+    @include xs {
       text-align: center;
     }
 
     .card__icon {
       margin-top: 25px;
 
-      @media #{$xs} {
+      @include xs {
         margin-top: 10px;
       }
     }
@@ -77,7 +77,7 @@
     justify-content: center;
     margin: auto;
 
-    @media #{$xs-l} {
+    @include xsL {
       flex-direction: column;
     }
 
@@ -91,7 +91,7 @@
       margin-bottom: 0;
       margin-right: 20px;
 
-      @media #{$xs-l} {
+      @include xsL {
         margin-right: 0;
         margin-bottom: 30px;
         max-width: 100%;
