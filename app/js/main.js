@@ -10,7 +10,7 @@ $(document).ready(function(){
 
         $slider.owlCarousel({
             ...baseSliderOptions($slider, $hasSliderChildren),
-            navText: $hasSliderChildren ? [`<img alt='slider-arrow-icon' src='images/icons/slider_arrow-left${$isSliderProject ? '--green' : ''}.svg'>`, `<img alt='slider-arrow-icon' src='images/icons/slider_arrow-right${$isSliderProject ? '--green' : ''}.svg'>`] : [],
+            navText: $hasSliderChildren ? [`<img alt='slider-arrow-icon' src='/images/icons/slider_arrow-left${$isSliderProject ? '--green' : ''}.svg'>`, `<img alt='slider-arrow-icon' src='/images/icons/slider_arrow-right${$isSliderProject ? '--green' : ''}.svg'>`] : [],
             navContainer: `#slider${$isSliderProject ? '-project' : ''}-nav`,
             dots: $hasSliderChildren && !$isSliderProject,
             dotsContainer: $isSliderProject ? false : '#slider-dots',
