@@ -89,6 +89,29 @@ p {
 	}
 }
 
+.heading {
+
+	&-lg {
+		font-size: 34px;
+
+		@include md {
+			font-size: 24px;
+		}
+	}
+
+	&-md {
+		font-size: 24px;
+	}
+
+	&-sm {
+		font-size: 18px;
+	}
+
+	&-xs {
+		font-size: 16px;
+	}
+}
+
 .text {
 
 	&-size {

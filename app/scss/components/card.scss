@@ -21,7 +21,7 @@
 .card {
   position: relative;
 
-  h1 {
+  .heading-lg, h1 {
     text-transform: uppercase;
 
     & + p {
@@ -33,25 +33,26 @@
     }
   }
 
-  h2 {
+  .heading-md, h2 {
     & + p {
       margin-top: 10px;
     }
   }
 
-  h3 {
+  .heading-sm, h3 {
     & + p {
       margin-top: 15px;
     }
   }
 
-  h4 {
+  .heading-xs, h4 {
     & + p {
       margin-top: 15px;
     }
   }
 
   &__title {
+    display: block;
 
     &-buttons {
       float: right;
@@ -67,6 +68,7 @@
   &__img {
     --maxHeight: 230px;
     --minHeight: 230px;
+    display: block;
     min-height: var(--minHeight);
     max-height: var(--maxHeight);
     border-radius: $base-border-radius;
