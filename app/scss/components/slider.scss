@@ -39,6 +39,11 @@
     @include xsL {
       min-height: 300px;
     }
+
+    @media (max-height: 1000px) {
+      max-height: 640px;
+      min-height: 640px;
+    }
   }
 
   &__title {
