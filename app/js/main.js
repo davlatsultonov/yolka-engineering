@@ -77,6 +77,8 @@ function baseSliderOptions(slider, hasSliderChildren) {
         loop: true,
         items: 1,
         autoHeight:true,
+        autoplay: true,
+        autoplayTimeout: 2500,
         nav: hasSliderChildren,
         navText: hasSliderChildren ? [`<img alt='slider-arrow-icon' src='images/icons/slider_arrow-left.svg'>`, `<img alt='slider-arrow-icon' src='images/icons/slider_arrow-right.svg'>`] : [],
         touchDrag: hasSliderChildren,
