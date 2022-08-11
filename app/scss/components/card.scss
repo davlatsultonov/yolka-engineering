@@ -140,6 +140,23 @@
         margin-bottom: 10px;
       }
     }
+
+    &--darkened {
+      position: relative;
+      overflow-x: hidden;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-position: center;
+        background-color: rgba(89, 89, 89, 0.62);
+        box-shadow: 0 0 0 9999px rgba(89, 89, 89, 0.62);
+      }
+    }
   }
 
   &__icon {
